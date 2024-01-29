@@ -1,4 +1,6 @@
-class Coche(color: String, marca: String, modelo: String, numCaballos: Int, numPuertas: Int, matricula: String) {
+import java.util.*
+
+class Coche(color: String, marca:, modelo: String, numCaballos: Int, numPuertas: Int, matricula: String) {
 
     //GETTER - SETTER - PROPIEDADES DE CLASE:
     var color: String = ""
@@ -6,24 +8,14 @@ class Coche(color: String, marca: String, modelo: String, numCaballos: Int, numP
         set(value) {
             field = value
         }
-
     val marca: String
-        get() = marca
+        get() = marca.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
 
-    val modelo: String
-        get() = modelo
-
-    val numCaballos: Int
-        get() = numCaballos
-
-    val numPuertas: Int
-        get() = numPuertas
-
-    val matricula: String
-        get() = matricula
     init {
         require(marca.isNullOrBlank()) {"Este campo no puede estar en blanco."}
         require(modelo.isNullOrBlank()) {"Este campo no puede estar en blanco."}
         require(color.isBlank()) {"Este campo no puede estar en blanco."}
+        require((matricula.length) == 7) {"La matrícula debe tener 7 caracteres."}
     }
+
 }
