@@ -24,6 +24,7 @@ valor inferior a 3, ni superior a 5.
 ·Ten en cuenta todas estas condiciones a la hora de crear el constructor de la clase.
 
 3.-En el programa principal, instancia varios coches y muéstralos por pantalla. 
+
 Probar las modificaciones anteriores, modifica el número de caballos para un coche y haz lo mismo para el número de 
 puertas, el color, la marca y modelo. 
 Vuelve a mostrarlos por pantalla.
