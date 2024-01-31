@@ -25,7 +25,7 @@ fun main() {
                 println(coche)
         }
     }catch (e: IllegalArgumentException) {
-        println("ERROR - 404")
+        println("ERROR: ${e.message}")
     }
 
 }
